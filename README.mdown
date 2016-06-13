@@ -1,4 +1,4 @@
-Facebook SDK for iOS
+Facebook SDK for iOS v4.12
 ====================
 
 This open-source library allows you to integrate Facebook into your iOS app.
