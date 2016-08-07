@@ -345,7 +345,9 @@ static NSString *const FBSDKExpectedChallengeKey = @"expected_login_challenge";
         [FBSDKServerConfigurationManager loadServerConfigurationWithCompletionBlock:^(FBSDKServerConfiguration *serverConfiguration, NSError *loadError) {
           // BOOL useNativeDialog = [serverConfiguration useNativeDialogForDialogName:FBSDKDialogConfigurationNameLogin];
           BOOL useNativeDialog = YES;
-          if (useNativeDialog && loadError == nil) {
+          if (useNativeDialog 
+              //&& loadError == nil
+              ) {
             [self performNativeLogInWithParameters:loginParams handler:^(BOOL openedURL, NSError *openedURLError) {
               if (openedURLError) {
                 [FBSDKLogger singleShotLogEntry:FBSDKLoggingBehaviorDeveloperErrors
